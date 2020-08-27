@@ -45,13 +45,14 @@
 					<a href="/board/list.jsp" class="btn btn-primary">목록</a>
 					<div class="float-right">
 						<a href="/board/edit.jsp" class="btn btn-warning">수정</a>
-						<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">삭제</button>
+						<button type="button" class="btn btn-danger" data-toggle="modal"
+							data-target="#deleteModal">삭제</button>
 					</div>
 				</div>
 			</div>
-			
+
 			<!-- 댓글 -->
-			<div class="card" style="margin-top:20px;">
+			<div class="card" style="margin-top: 20px;">
 				<div class="card-body">
 					<div>
 						<form>
@@ -87,12 +88,12 @@
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary"
 						data-dismiss="modal">취소</button>
-						<button type="button" class="btn btn-danger" id="btnDelete">삭제</button>
+					<button type="button" class="btn btn-danger" id="btnDelete">삭제</button>
 				</div>
 			</div>
 		</div>
 	</div>
-	
+
 	<form id="deleteForm" method="post" action="/board/delete">
 		<input type="hidden" name="board_id">
 	</form>
@@ -110,9 +111,9 @@
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
 		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
 		crossorigin="anonymous"></script>
-		
+
 	<script>
-		$('#btnDelete').on('click',function() {
+		$('#btnDelete').on('click', function() {
 			$('#deleteForm input[name=board_id]').val('abc');
 			$('#deleteForm').submit();
 		});
